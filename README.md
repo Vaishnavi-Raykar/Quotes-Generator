@@ -1,15 +1,15 @@
 
-# 1. Recipe Generator Bot
-In this project, I developed a Recipe Generator and Suggestion App using React for the frontend, Tailwind CSS for styling, and Shadcn UI for enhanced UI components.
-- Recipe Generation:
-Users can add a recipe by entering the dish name. The app automatically generates ingredients, instructions, and tips using an internal logic (or AI-based integration).4
+# 1. Daily Quotes Generator
+- Daily Quote Display: The app displays a new inspirational quote each day, providing motivation and positivity to users. The quote updates in real-time with a visually appealing clock and date display.
 
-- Recipe Suggestions:
-Users can input available ingredients, and the app will suggest recipes based on matching ingredients using predefined logic.
+- Quote Generation and Selection: Users can generate a new quote by pressing the "Generate New Quote" button. Additionally, the app allows users to request specific categories of quotes, like Motivational, Inspirational, Positive, Life, or Wisdom. Based on the input category, the app retrieves an appropriate quote using predefined logic.
+
+
 
 ## 2. Name of Issue/Topic
 
-⭐ 02 - Recipe Generator (Hacktoberfest Demo)  #603
+⭐ 07 - Daily Quote App (Hacktoberfest Demo) #608
+
 
 ## 3. Technologies Being Used
 
@@ -18,36 +18,31 @@ List the technologies and frameworks you used (e.g., CopilotKit, Next.js)
 - [Tailwind CSS](https://tailwindcss.com)
 - [CopilotKit](https://copilotkit.ai)
 - [ShadCN](https://ui.shadcn.com)
-
-### Note: Please only use the [Shadcn/ui]([https://v0.dev/docs](https://ui.shadcn.com/docs/installation)) for styling components.
-
 - Shadcn-UI Component Styling
 - CopilotKit
 
 ## 4. GitHub Project Link
 
-### GitHub Repo Link: 
+Click here - [Link](https://github.com/Vaishnavi-Raykar/Quotes-Generator) 
 
 ### 5 Live Link
 
-- [Live app]()
+- [Live app](https://quotes-generator-pi-one.vercel.app/)
  
 ## 6. Screenshot
 
-![image](https://github.com/user-attachments/assets/73a331d4-e6c0-4303-82da-2558d106f4bf)
-
-![image](https://github.com/user-attachments/assets/22388ceb-6ef6-4e6f-a2e4-34f9ebe43105)
+![image](https://github.com/user-attachments/assets/65f7e2ae-58bc-471a-9332-f75bae71ac88)
+![image](https://github.com/user-attachments/assets/efdd01f3-e76b-4065-a9c3-91889a7e1a0e)
 
 
 ## 7. Who am i?
 
-Please list your **GitHub** and **Twitter** handles if you feel comfortable doing so. 
+Please list your **GitHub** and **Linkedin** handles if you feel comfortable doing so. 
 
-- [sanket on github](https://github.com/sanketshinde3001)
-- [sanket on X](https://x.com/sanketshinde04)
+- [Vaishnavi on github](https://github.com/Vaishnavi-Raykar)
+- [Vaishnavi on linkedin](https://www.linkedin.com/in/vaishnavi-raykar-554827265/)
 
 ## 8. Posts
 
-- A dev.to blog link - [Link](https://dev.to/sanketshinde/recipe-generator-powered-by-copilotkit-chatbot-2nl0)
-- Tweet link - [Link](https://x.com/sanketshinde04/status/1845898967038521511)
+- A dev.to blog link - [Link](https://dev.to/vaishnavi_raykar/daily-quote-app-4bi7)
 
