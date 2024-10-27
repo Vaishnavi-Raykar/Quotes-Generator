@@ -46,3 +46,4 @@ Please list your **GitHub** and **Linkedin** handles if you feel comfortable doi
 
 - A dev.to blog link - [Link](https://dev.to/vaishnavi_raykar/daily-quote-app-4bi7)
 
+#issue 608 : Build a TodoList that helps to add task using CopilotKit's AI interaction capabilities.
