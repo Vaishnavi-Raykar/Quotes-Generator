@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useQuotes } from "../context/QuoteContext";
 import { Button } from "@/components/ui/button";
-// import { Card,CardHeader } from "@/components/ui/card";
 import {
   Card,
   CardHeader,
@@ -10,7 +9,6 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-
 import { Heart, RefreshCw, Share2 } from "lucide-react";
 
 const QuoteList = () => {
@@ -123,15 +121,40 @@ const Clock = () => {
 };
 
 const QuoteCard = ({ quote }) => {
-  const [liked, setLiked] = useState(false);
+  // Use localStorage to persist likes between refreshes
+  const [likedQuotes, setLikedQuotes] = useState(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("likedQuotes");
+      return saved ? JSON.parse(saved) : {};
+    }
+    return {};
+  });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    // Load liked quotes from localStorage on mount
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("likedQuotes");
+      if (saved) {
+        setLikedQuotes(JSON.parse(saved));
+      }
+    }
   }, []);
 
+  useEffect(() => {
+    // Save liked quotes to localStorage whenever they change
+    if (typeof window !== "undefined") {
+      localStorage.setItem("likedQuotes", JSON.stringify(likedQuotes));
+    }
+  }, [likedQuotes]);
+
   const handleLike = () => {
-    setLiked(!liked);
+    setLikedQuotes(prev => ({
+      ...prev,
+      // Use a unique identifier for each quote (combination of quote text and author)
+      [`${quote.quote}-${quote.author}`]: !prev[`${quote.quote}-${quote.author}`]
+    }));
   };
 
   const handleShare = () => {
@@ -146,6 +169,8 @@ const QuoteCard = ({ quote }) => {
   };
 
   if (!mounted) return null;
+
+  const isLiked = likedQuotes[`${quote.quote}-${quote.author}`] || false;
 
   return (
     <Card className="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -165,10 +190,10 @@ const QuoteCard = ({ quote }) => {
           <button
             onClick={handleLike}
             className={`text-muted-foreground hover:text-pink-500 transition-transform duration-300 transform hover:scale-110 ${
-              liked ? "text-pink-500 fill-current" : ""
+              isLiked ? "text-pink-500 fill-current" : ""
             }`}
           >
-            <Heart size={20} fill={liked ? "currentColor" : "none"} />
+            <Heart size={20} fill={isLiked ? "currentColor" : "none"} />
           </button>
 
           <button

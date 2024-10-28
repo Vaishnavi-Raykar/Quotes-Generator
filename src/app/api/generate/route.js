@@ -12,7 +12,7 @@ export async function POST(req) {
     const randomType = quoteTypes[Math.floor(Math.random() * quoteTypes.length)];
 
     const result = await model.generateContent(
-      `Generate an inspiring ${randomType} quote in JSON format.
+      `Generate an inspiring,motivating,positive or life realted ${randomType} good quote with its real author name in JSON format.
       The quote should be profound and meaningful.
       Use the following structure:
       {
